@@ -10,7 +10,7 @@
 .hero-tall {
   @include grid(center, center);
   min-height: 70vh;
-  padding: 6rem;
+  padding: 6vw;
 
   h1 {
     text-transform: uppercase;

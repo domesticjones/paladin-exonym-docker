@@ -1,44 +1,87 @@
 /**
   Global Website Header
   ---------------------------------------------------------------------- */
-.header-top {
-  padding: 1rem 0;
-  z-index: 9999;
-  width: 100%;
-  background-color: $white;
+body {
+  padding-top: 5rem;
+}
 
-  .wrap {
-    @include grid(space-between, center);
-  }
+#header {
+  @include grid(space-between, center);
+  background-color: $white;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  padding: 1rem 6vw;
+  width: 100%;
 
   .nav-social {
-    ul {
-      @include listStripped();
-      @include grid();
+    @include navMenu(horizontal);
+    margin-left: 0.5em;
 
-      li {
-        margin: 0 0.5em;
-      }
+    a {
+      display: block;
+      margin: 0.25em;
+    }
 
-      a,
-      img {
-        display: block;
-        height: 2em;
-      }
+    span {
+      display: none;
+    }
 
-      span {
-        display: none;
-      }
+    img {
+      display: block;
+      height: 1.5rem;
+      width: auto;
     }
   }
 }
 
-.logo-header {
-  display: block;
-  height: 2.5rem;
+.header-logo {
+  height: 3rem;
+  width: auto;
 }
 
-#responsive-nav-toggle {
+.header-nav {
+  @include navMenu(dropdown);
+  margin-left: auto;
+  text-transform: uppercase;
+
+  a {
+    display: block;
+    padding: 0.5em;
+    margin: 0 0.5em;
+    @include transition();
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  & > ul > li:last-child {
+    a {
+      color: $orange;
+      @include fontItalic();
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  .sub-menu {
+    background-color: $white;
+    padding-bottom: 0.5rem;
+    font-size: 0.85em;
+    text-transform: none;
+
+    a {
+      padding: 0.5em 0.75rem;
+    }
+  }
+}
+
+#header-nav-toggle {
+  @include hamburgerMenu(9, $blue, 0.6);
   display: none;
 }
 
@@ -46,16 +89,12 @@
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .header-top {
-    padding: 1rem;
-  }
-
-  .nav-header,
-  .header-top .nav-social {
+  #header .nav-social,
+  .header-nav {
     display: none;
   }
 
-  #responsive-nav-toggle {
+  #header-nav-toggle {
     display: block;
   }
 }
