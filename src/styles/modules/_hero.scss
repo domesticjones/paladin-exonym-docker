@@ -1,6 +1,4 @@
 .module-hero {
-  @include grid(center, center);
-  padding: 6rem;
   font-size: 1.5rem;
   color: $white;
 
@@ -10,10 +8,36 @@
 }
 
 .hero-tall {
+  @include grid(center, center);
   min-height: 70vh;
+  padding: 6rem;
 
   h1 {
     text-transform: uppercase;
     text-shadow: 0.1em 0.1em 0.1em $black;
+  }
+}
+
+.hero-short {
+  @include grid(center, flex-end);
+  min-height: 30vh;
+  padding: 2rem;
+
+  h1 {
+    @include fontBold(false);
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 960px) {
+  .module-hero {
+    text-align: center;
+    font-size: 1.15rem;
+  }
+
+  .hero-tall {
+    min-height: 50vh;
+    padding: 2rem;
   }
 }
