@@ -59,6 +59,28 @@ export default {
       slidesToShow: 4,
       autoplay: true,
       speed: 2000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            speed: 1500,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            speed: 1000,
+          },
+        },
+      ],
     });
 
     $('#testimonials-wrap').slick({

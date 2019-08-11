@@ -77,6 +77,10 @@
   .module-inner {
     max-width: 768px;
   }
+
+  .video-container {
+    margin-bottom: 0;
+  }
 }
 
 .module-testimonials {
@@ -126,6 +130,12 @@
   }
 }
 
+.module-imagecta {
+  .aligncenter {
+    margin: 0;
+  }
+}
+
 .module-events {
   font-size: 1.5em;
   background-color: $tan;
@@ -136,5 +146,39 @@
 
   h1 {
     margin-bottom: 0.25em;
+  }
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .module-subhead,
+  .module-events {
+    font-size: 1.25em;
+  }
+
+  .module-testimonials blockquote {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 960px) {
+  #advantage-list {
+    max-width: 100%;
+    width: calc(100% - 10rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .module-subhead,
+  .module-advantage,
+  .module-value,
+  .module-events {
+    font-size: 1em;
+  }
+
+  .module-testimonials blockquote {
+    font-size: 1.25em;
   }
 }

@@ -86,6 +86,12 @@ body {
   font-weight: $font-normal;
 }
 
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+
 /**
   Global Website Headings
   ---------------------------------------------------------------------- */
