@@ -1,0 +1,62 @@
+.module-default {
+  h1, h2, h3, h4, a {
+    color: $orange;
+  }
+
+  .module-inner {
+    @include grid(space-between);
+    max-width: 1400px;
+  }
+}
+
+.default-content {
+  width: 50%;
+}
+
+.default-sidebar {
+  width: 30%;
+
+  img {
+    display: block;
+    max-width: 360px;
+    width: 100%;
+    margin: 4vw auto;
+  }
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .default-content {
+    width: 60%;
+    padding-right: 2rem;
+  }
+
+  .default-sidebar {
+    width: 40%;
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-template-default {
+    .module-hero.hero-short {
+      min-height: 25vh;
+
+      h1 {
+        display: none;
+      }
+    }
+  }
+
+  .module-default .module-inner {
+    @include grid(center, center, column-reverse);
+  }
+
+  .default-content,
+  .default-sidebar {
+    width: 100%;
+    padding: 0 0 2rem 0;
+  }
+}
