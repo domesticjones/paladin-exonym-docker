@@ -1,10 +1,103 @@
 /**
   Global Website Footer
   ---------------------------------------------------------------------- */
-.nav-footer {
+#footer {
+  @include grid(space-around, center);
+  background-color: $tan-dark;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  .address {
+    white-space: pre-line;
+    margin-top: 1rem;
+  }
+
+  .nav-social {
+    @include navMenu(horizontal);
+    @include grid(center, center);
+    margin-bottom: 2rem;
+
+    span {
+      display: none;
+    }
+
+    img {
+      height: 2rem;
+
+    }
+
+    a {
+      display: block;
+      margin: 0.5rem;
+      opacity: 0.3;
+    }
+  }
+
+  .nav-phone,
+  .nav-email {
+    @include navMenu(vertical);
+    text-align: right;
+    margin: 1rem 0;
+
+    .name {
+      display: none;
+    }
+  }
+
+  .nav-phone {
+    font-size: 2em;
+  }
+
+  .nav-email {
+    font-size: 1.5em;
+  }
+}
+
+.footer-column {
+  padding: 2rem;
+}
+
+.footer-logo {
+  height: 5rem;
+}
+
+.footer-nav {
   @include navMenu(vertical);
+  text-align: center;
+  text-transform: uppercase;
+  @include fontBold();
+
+  a {
+    display: block;
+    margin: 1em;
+  }
+
+  .sub-menu {
+    text-transform: none;
+    font-size: 0.85em;
+    @include fontBold(false);
+  }
 }
 
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  #footer {
+    @include grid(center, center, column);
+    text-align: center;
+    padding: 2rem;
+
+    .footer-column {
+      padding: 0;
+    }
+
+    .nav-phone,
+    .nav-email {
+      text-align: center;
+    }
+  }
+}

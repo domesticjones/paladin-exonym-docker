@@ -1,21 +1,26 @@
 			<footer id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-				<div class="wrap">
-					<p class="copyright">&copy; Copyright <?php ex_brand('legal'); ?></p>
-					<nav class="nav-footer" role="navigation">
-						<?php wp_nav_menu(array(
-							'container' => 'ul',                    // enter '' to remove nav container
-							'container_class' => 'footer-links cf',	// class of container (should you choose to use it)
-							'menu' => __('Footer', 'exonym'),	      // nav name
-							'menu_class' => 'nav footer-nav cf',    // adding custom nav class
-							'theme_location' => 'footer-menu',		  // where it's located in the theme
-							'before' => '',							            // before the menu
-							'after' => '',							            // after the menu
-							'link_before' => '',					          // before each link
-							'link_after' => '',						          // after each link
-							'depth' => 1,							              // limit the depth of the nav
-							'fallback_cb' => ''						          // fallback function
-						)); ?>
+				<div class="footer-column">
+					<img src="<?php ex_logo('primary', 'light'); ?>" alt="Logo for <?php ex_brand('legal'); ?>" class="footer-logo" />
+					<p class="address"><?php ex_contact('address'); ?></p>
+				</div>
+				<div class="footer-column">
+					<nav class="footer-nav" role="navigation">
+						<?php
+							ex_social();
+							wp_nav_menu(array(
+								'container' => 'ul',
+								'menu' => __('Footer', 'exonym'),
+								'theme_location' => 'footer-menu',
+								'depth' => 2,
+							));
+						?>
 					</nav>
+				</div>
+				<div class="footer-column">
+					<?php
+						ex_contact('phone');
+						ex_contact('email');
+					?>
 				</div>
 			</footer>
 		</div>
