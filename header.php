@@ -29,3 +29,13 @@
           <span class="line"></span>
 				</a>
       </header>
+			<nav id="nav-mobile">
+				<?php
+					wp_nav_menu(array(
+						'container' => false,
+						'menu' => __('Responsive', 'exonym'),
+						'theme_location' => 'responsive-menu',
+						'depth' => 0,
+					));
+				?>
+			</nav>

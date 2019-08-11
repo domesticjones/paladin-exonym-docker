@@ -1,3 +1,40 @@
 /**
   Responsive Navigation
   ---------------------------------------------------------------------- */
+#nav-mobile {
+  @include navMenu(vertical);
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: $blue;
+  padding: 7rem 2rem 2rem 2rem;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  transform: translateY(-100%);
+  @include transition(all 500ms ease-in-out);
+
+  &.is-active {
+    transform: translateY(0);
+  }
+
+  a {
+    display: block;
+    color: $white;
+    padding: 0.5em;
+  }
+
+  .sub-menu {
+    font-size: 0.75em;
+    margin-bottom: 1rem;
+    text-transform: none;
+
+    a {
+      color: $tan-dark;
+    }
+  }
+}
