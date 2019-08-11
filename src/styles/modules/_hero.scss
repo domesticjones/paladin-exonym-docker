@@ -1,0 +1,19 @@
+.module-hero {
+  @include grid(center, center);
+  padding: 6rem;
+  font-size: 1.5rem;
+  color: $white;
+
+  .module-inner {
+    width: 100%;
+  }
+}
+
+.hero-tall {
+  min-height: 70vh;
+
+  h1 {
+    text-transform: uppercase;
+    text-shadow: 0.1em 0.1em 0.1em $black;
+  }
+}
