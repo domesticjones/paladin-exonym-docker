@@ -45,7 +45,7 @@
 				$imageCtaLink = $imageCta['link'];
 				echo ex_wrap('start', 'imagecta');
 					if(!empty($imageCtaLink)) { echo '<a href="' . $imageCtaLink['url'] . '" target="' . $imageCtaLink['target'] . '">'; }
-						echo wp_get_attachment_image($imageCta['image']['ID'], 'large', false, array('class' => 'aligncenter'));
+						echo wp_get_attachment_image($imageCta['image']['ID'], 'large');
 					if(!empty($imageCtaLink)) { echo '</a>'; }
 				echo ex_wrap('end');
 			}

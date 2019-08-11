@@ -9,7 +9,7 @@
 
 .hero-tall {
   @include grid(center, center);
-  min-height: 70vh;
+  min-height: 80vh;
   padding: 6vw;
 
   h1 {
@@ -20,7 +20,7 @@
 
 .hero-short {
   @include grid(center, flex-end);
-  min-height: 30vh;
+  min-height: 40vh;
   padding: 2rem;
 
   h1 {

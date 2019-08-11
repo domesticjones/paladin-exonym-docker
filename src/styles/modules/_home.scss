@@ -7,6 +7,10 @@
     max-width: 1200px;
   }
 
+  h2 {
+    font-family: $font-heading;
+  }
+
   a {
     color: $tan-dark;
   }
@@ -69,6 +73,7 @@
   }
 
   h2 {
+    font-family: $font-heading;
     color: $orange;
   }
 }
@@ -131,8 +136,9 @@
 }
 
 .module-imagecta {
-  .aligncenter {
-    margin: 0;
+  img {
+    display: block;
+    margin: 0 auto;
   }
 }
 

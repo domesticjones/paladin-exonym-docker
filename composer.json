@@ -28,6 +28,7 @@
     "wpackagist-plugin/ari-adminer": "*",
     "wpackagist-plugin/admin-menu-editor": "*",
     "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
+    "wpackagist-plugin/regenerate-thumbnails": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "*"
   }
 }

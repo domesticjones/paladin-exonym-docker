@@ -1,0 +1,80 @@
+.module-team-content {
+  background-color: $tan-light;
+
+  h1, h2, h3, h4, a {
+    color: $orange;
+  }
+
+  .module-inner {
+    @include grid(space-between);
+    max-width: 1600px;
+  }
+}
+
+.team-content-column {
+  width: calc(50% - 2rem);
+}
+
+.module-team-member {
+  .module-inner {
+    max-width: 1600px;
+    @include grid(space-between, flex-start, row);
+  }
+
+  &:nth-child(odd) .module-inner {
+    @include grid(space-between, flex-start, row-reverse);
+  }
+}
+
+.team-photo {
+  width: 30%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.team-info {
+  width: 60%;
+
+  h2 {
+    font-size: 1.75em;
+    color: $orange;
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .module-team-content .module-inner {
+    @include grid(center, center, column);
+  }
+
+  .team-content-column {
+    width: 100%;
+  }
+
+  .team-photo,
+  .team-info {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .module-team-member .module-inner,
+  .module-team-member:nth-child(odd) .module-inner {
+    @include grid(center, center, column);
+  }
+
+  .team-photo,
+  .team-info {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}

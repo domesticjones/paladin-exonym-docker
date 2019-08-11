@@ -41,6 +41,8 @@
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
-.module {
-  padding: 2rem;
+@media (max-width: 480px) {
+  .module {
+    padding: 2rem;
+  }
 }
