@@ -1,5 +1,7 @@
+import $ from 'jquery';
+window.jQuery = $;
 require('jquery-visible');
-const $ = jQuery;
+require('slick-carousel');
 
 export default {
   init() {
@@ -52,5 +54,16 @@ export default {
   			}
   		});
   	});
+
+    $('#advantage-list').slick({
+      slidesToShow: 4,
+      autoplay: true,
+      speed: 2000,
+    });
+
+    $('#testimonials-wrap').slick({
+      adaptiveHeight: true,
+      autoplay: true,
+    });
   },
 };

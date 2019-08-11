@@ -1,6 +1,6 @@
 <?php
   // Global Wrapper
-  function ex_wrap($pos, $key = null, $class = []) {
+  function ex_wrap($pos, $key = null, $class = [], $inner = true) {
     $output = '';
     $classPrint = '';
     if($pos == 'start') {
@@ -12,8 +12,10 @@
         $classPrint = ' ' . join(' ', $class);
       }
       $output = '<section class="module module-' . $key . $classPrint . ' animate-parallax animate-z-normal">';
+      if($inner == true) { $output .= '<div class="module-inner">'; }
     } elseif($pos == 'end') {
-      $output = '</section>';
+      if($inner == true) { $output .= '</div>'; }
+      $output .= '</section>';
     } else {
       return;
     }

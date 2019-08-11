@@ -38,3 +38,15 @@ $roleObject = get_role( 'editor' );
 if (!$roleObject->has_cap('edit_theme_options')) {
   $roleObject->add_cap('edit_theme_options');
 }
+
+// Inject some custom CSS
+function ex_adminStyles() {
+  echo '<style>
+    #set-post-thumbnail img {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+    }
+  </style>';
+}
+add_action('admin_head', 'ex_adminStyles');

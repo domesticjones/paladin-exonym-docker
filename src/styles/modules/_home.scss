@@ -1,0 +1,140 @@
+.module-subhead {
+  font-size: 1.5em;
+  color: $white;
+  background-color: $blue;
+
+  .module-inner {
+    max-width: 1200px;
+  }
+
+  a {
+    color: $tan-dark;
+  }
+}
+
+.module-advantage {
+  font-size: 1.25em;
+
+  .module-inner {
+    max-width: 1024px;
+  }
+}
+
+.adv-single {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+#advantage-list {
+  max-width: 80vw;
+  margin: 0 auto 4vw auto;
+  position: relative;
+
+  .slick-arrow {
+    @include icon(arrowRight-orange);
+    position: absolute;
+    font-size: 0;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    position: absolute;
+    top: calc(50% - 1rem);
+
+    &.slick-prev {
+      left: -4rem;
+      transform: rotate(180deg);
+    }
+
+    &.slick-next {
+      right: -4rem;
+    }
+  }
+}
+
+.module-value {
+  background-color: $tan;
+  font-size: 1.25em;
+
+  .module-inner {
+    max-width: 1024px;
+  }
+
+  h2 {
+    color: $orange;
+  }
+}
+
+.module-video {
+  .module-inner {
+    max-width: 768px;
+  }
+}
+
+.module-testimonials {
+  background-color: $blue;
+  color: $white;
+
+  .module-inner {
+    max-width: 1200px;
+  }
+
+  blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 2.5em;
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+
+    q,
+    cite {
+      display: block;
+      padding: 1rem;
+      @include fontItalic();
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 4rem;
+    background-color: transparent;
+    font-size: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: none;
+    @include icon('quote-orange');
+
+    &.slick-prev {
+      transform: scaleX(-1);
+      left: -6.5rem;
+    }
+
+    &.slick-next {
+      right: -6.5rem;
+    }
+  }
+}
+
+.module-events {
+  font-size: 1.5em;
+  background-color: $tan;
+
+  .module-inner {
+    max-width: 768px;
+  }
+
+  h1 {
+    margin-bottom: 0.25em;
+  }
+}

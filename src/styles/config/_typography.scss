@@ -87,31 +87,6 @@ body {
 }
 
 /**
-  Exonym Module Text Sizes
-  ---------------------------------------------------------------------- */
-.module-text-size {
-  &-xsmall {
-    font-size: 0.75em;
-  }
-
-  &-small {
-    font-size: 0.85em;
-  }
-
-  &-normal {
-    font-size: 1em;
-  }
-
-  &-large {
-    font-size: 1.25em;
-  }
-
-  &-xlarge {
-    font-size: 1.5em;
-  }
-}
-
-/**
   Global Website Headings
   ---------------------------------------------------------------------- */
 h1,
@@ -124,7 +99,7 @@ h6 {
   display: block;
   text-rendering: optimizelegibility;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.5em 0;
   line-height: 1;
   font-family: $font-heading;
 
@@ -133,33 +108,27 @@ h6 {
 
 h1 {
   font-size: 2.5em;
-  margin-bottom: 0.5em;
 }
 
 h2 {
   font-size: 2em;
-  margin-bottom: 0.5em;
 }
 
 h3 {
   font-size: 1.5em;
-  margin-bottom: 1em;
 }
 
 h4 {
   font-size: 1.25em;
-  margin-bottom: 1em;
 }
 
 h5 {
   font-size: 1em;
-  margin-bottom: 1em;
   text-transform: uppercase;
 }
 
 h6 {
   font-size: 0.75em;
-  margin-bottom: 2em;
   text-transform: uppercase;
   letter-spacing: 0.25em;
 }
