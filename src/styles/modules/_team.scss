@@ -17,17 +17,29 @@
 
 .module-team-member {
   .module-inner {
-    max-width: 1600px;
-    @include grid(space-between, flex-start, row);
+    max-width: 1200px;
+    @include grid(space-between, center, row);
   }
 
   &:nth-child(odd) .module-inner {
-    @include grid(space-between, flex-start, row-reverse);
+    @include grid(space-between, center, row-reverse);
+
+    .team-info {
+      padding-right: 2rem;
+    }
+  }
+
+  &:nth-child(even) {
+    background-color: $tan;
+
+    .team-info {
+      padding-left: 2rem;
+    }
   }
 }
 
 .team-photo {
-  width: 30%;
+  width: 40%;
 
   img {
     width: 100%;
@@ -63,6 +75,7 @@
   .team-photo,
   .team-info {
     width: calc(50% - 2rem);
+    padding: 0 !important;
   }
 }
 

@@ -1,13 +1,18 @@
 .module-subhead {
   font-size: 1.5em;
-  color: $white;
-  background-color: $blue;
+  color: $black;
+  background-color: $tan;
 
   .module-inner {
     max-width: 1200px;
   }
 
   h2 {
+    font-family: $font-heading;
+    color: $orange;
+  }
+
+  p {
     font-family: $font-heading;
   }
 
@@ -34,6 +39,12 @@
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
+    transform: scale(0.9);
+    @include transition();
+  }
+
+  &:hover img {
+    transform: scale(1);
   }
 }
 
@@ -65,11 +76,12 @@
 }
 
 .module-value {
-  background-color: $tan;
   font-size: 1.25em;
 
   .module-inner {
-    max-width: 1024px;
+    max-width: 1200px;
+    padding: 2rem;
+    background-color: $tan;
   }
 
   h2 {
@@ -89,8 +101,8 @@
 }
 
 .module-testimonials {
-  background-color: $blue;
-  color: $white;
+  background-color: $tan-light;
+  color: $blue;
 
   .module-inner {
     max-width: 1200px;
@@ -99,8 +111,9 @@
   blockquote {
     padding: 0;
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.25em;
     text-align: center;
+    @include fontBold();
 
     &::before {
       display: none;
@@ -111,6 +124,15 @@
       display: block;
       padding: 1rem;
       @include fontItalic();
+    }
+
+    cite {
+      text-align: right;
+
+      &::before {
+        content: '\2014';
+        margin-right: 0.5ex;
+      }
     }
   }
 
@@ -136,9 +158,12 @@
 }
 
 .module-imagecta {
+  padding: 0;
+
   img {
     display: block;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -152,6 +177,38 @@
 
   h1 {
     margin-bottom: 0.25em;
+  }
+}
+
+.events-buttons {
+  @include listStripped();
+  @include grid(center, center);
+
+  li {
+    @include grid(center, stretch);
+    width: 50%;
+    padding: 2rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: $black;
+    }
+
+    &:first-of-type::before {
+      display: none;
+    }
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 

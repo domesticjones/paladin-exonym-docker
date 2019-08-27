@@ -10,10 +10,28 @@ export default {
 
   	// HEADER: Responsive Nav Toggle
   	$('#header-nav-toggle').click(e => {
+      e.preventDefault();
   		const $this = $(e.currentTarget);
   		$this.toggleClass('is-active');
-      $('#nav-mobile').toggleClass('is-active')
+      $('#nav-mobile').toggleClass('is-active');
   	});
+
+    // CONTACT: ScrollTo Link Capture
+    $('a[href="#contact"]').click(e => {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('#contact').offset().top - 62
+      }, 2000);
+    });
+
+    // HEADER: Add class on scroll
+    $(window).on('scroll', () => {
+      if($(window).scrollTop() > 100) {
+        $('#header').addClass('is-scrolled');
+      } else {
+        $('#header').removeClass('is-scrolled');
+      }
+    });
   },
   finalize() {
   	// MODULES: Parallax

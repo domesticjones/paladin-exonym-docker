@@ -45,13 +45,22 @@
 				$imageCtaLink = $imageCta['link'];
 				echo ex_wrap('start', 'imagecta');
 					if(!empty($imageCtaLink)) { echo '<a href="' . $imageCtaLink['url'] . '" target="' . $imageCtaLink['target'] . '">'; }
-						echo wp_get_attachment_image($imageCta['image']['ID'], 'large');
+						echo wp_get_attachment_image($imageCta['image']['ID'], 'jumbo');
 					if(!empty($imageCtaLink)) { echo '</a>'; }
 				echo ex_wrap('end');
 			}
 			if($events) {
 				echo ex_wrap('start', 'events');
 					echo $events;
+					if(have_rows('events_buttons')) {
+						echo '<ul class="events-buttons">';
+							while(have_rows('events_buttons')) {
+								the_row();
+								$button = get_sub_field('link');
+								echo '<li><a href="' . $button['url'] . '" class="cta-button" target="' . $button['target'] . '">' . $button['title'] . '</a></li>';
+							}
+						echo '</ul>';
+					}
 				echo ex_wrap('end');
 			}
 		endwhile; endif;

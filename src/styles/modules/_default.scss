@@ -1,6 +1,6 @@
 .module-default {
   background-color: $tan-light;
-  
+
   h1, h2, h3, h4, a {
     color: $orange;
   }
@@ -17,12 +17,13 @@
 
 .default-sidebar {
   width: 30%;
+  padding: 2rem;
 
   img {
     display: block;
     max-width: 360px;
     width: 100%;
-    margin: 4vw auto;
+    margin: 0 auto;
   }
 }
 
@@ -37,21 +38,11 @@
 
   .default-sidebar {
     width: 40%;
-    padding-left: 2rem;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
-  .page-template-default {
-    .module-hero.hero-short {
-      min-height: 25vh;
-
-      h1 {
-        display: none;
-      }
-    }
-  }
-
   .module-default .module-inner {
     @include grid(center, center, column-reverse);
   }

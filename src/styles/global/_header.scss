@@ -14,6 +14,11 @@ body {
   left: 0;
   padding: 1rem 6vw;
   width: 100%;
+  @include transition(all 500ms ease);
+
+  &.is-scrolled {
+    box-shadow: 0 0 1rem $black;
+  }
 
   .nav-social {
     @include navMenu(horizontal);

@@ -14,22 +14,22 @@
 
   h1 {
     text-transform: uppercase;
-    text-shadow: 0.1em 0.1em 0.1em $black;
+    text-shadow: 0.01em 0.01em 0.01em $black;
+    margin-bottom: 4vw;
   }
 }
 
 .hero-short {
-  @include grid(center, flex-end);
-  min-height: 40vh;
-  padding: 2rem;
+  padding: 0;
 
-  h1 {
-    @include fontBold(false);
-    margin-bottom: 0;
-    text-align: center;
+  img {
+    width: 100%;
   }
 }
 
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
 @media (max-width: 960px) {
   .module-hero {
     text-align: center;

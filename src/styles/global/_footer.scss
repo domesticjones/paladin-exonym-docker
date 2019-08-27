@@ -1,9 +1,23 @@
 /**
   Global Website Footer
   ---------------------------------------------------------------------- */
+#contact {
+  padding: 4vw;
+  text-align: center;
+  font-size: 1.5em;
+
+  .module-inner {
+    max-width: 1024px;
+  }
+
+  h1 {
+    margin-bottom: 0.75em;
+  }
+}
+
 #footer {
   @include grid(space-around, center);
-  background-color: $tan-dark;
+  background-color: $blue;
   color: $white;
 
   a {
@@ -26,13 +40,21 @@
 
     img {
       height: 2rem;
-
+      display: block;
+      margin: 0 auto;
+      @include transition();
     }
 
     a {
       display: block;
       margin: 0.5rem;
-      opacity: 0.3;
+      background-color: $white;
+      border-radius: 100%;
+      border: 2px solid $white;
+
+      &:hover img {
+        opacity: 0.6;
+      }
     }
   }
 
@@ -66,19 +88,25 @@
 
 .footer-nav {
   @include navMenu(vertical);
-  text-align: center;
+  text-align: right;
   text-transform: uppercase;
   @include fontBold();
 
   a {
     display: block;
-    margin: 1em;
+    margin: 1em 0 1em 1em;
   }
 
   .sub-menu {
     text-transform: none;
     font-size: 0.85em;
     @include fontBold(false);
+  }
+}
+
+.hbspt-form {
+  iframe {
+    width: 100% !important;
   }
 }
 
@@ -98,6 +126,14 @@
     .nav-phone,
     .nav-email {
       text-align: center;
+    }
+  }
+
+  .footer-nav {
+    text-align: center;
+
+    li {
+      margin: 1em;
     }
   }
 }
