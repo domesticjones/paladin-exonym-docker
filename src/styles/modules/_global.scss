@@ -1,7 +1,7 @@
 .module {
   position: relative;
   overflow: hidden;
-  padding: 4vw;
+  padding: 4vw 6vw;
 }
 
 .module-bg {
@@ -41,7 +41,7 @@
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .module {
     padding: 2rem;
   }

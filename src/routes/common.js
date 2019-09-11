@@ -19,6 +19,7 @@ export default {
     // CONTACT: ScrollTo Link Capture
     $('a[href="#contact"]').click(e => {
       e.preventDefault();
+      $('#nav-mobile, #header-nav-toggle').removeClass('is-active');
       $('html, body').animate({
         scrollTop: $('#contact').offset().top - 62
       }, 2000);

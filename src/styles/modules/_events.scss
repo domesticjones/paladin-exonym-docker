@@ -1,0 +1,30 @@
+.events-heading {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.events-list {
+  @include listStripped();
+  margin-bottom: 2rem;
+
+  li {
+    border-top: 1px solid $tan-dark;
+    padding: 1em 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  time {
+    font-size: 1.15em;
+    display: block;
+    margin-bottom: 0.5em;
+    @include fontBold();
+  }
+
+  span {
+    display: block;
+    @include fontItalic();
+  }
+}

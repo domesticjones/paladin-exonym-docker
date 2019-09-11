@@ -16,6 +16,8 @@
 }
 
 .module-team-member {
+  padding: 4rem 2rem 0 2rem;
+
   .module-inner {
     max-width: 1200px;
     @include grid(space-between, center, row);
