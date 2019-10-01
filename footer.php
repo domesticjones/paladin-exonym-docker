@@ -1,6 +1,6 @@
 			<footer id="contact">
 				<div class="module-inner">
-					<h1>Contact</h1>
+					<h1><?php the_field('contact_form_heading', 'options'); ?></h1>
 					<?php the_field('contact_form_embed_code', 'options'); ?>
 				</div>
 			</footer>

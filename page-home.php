@@ -24,7 +24,7 @@
 				echo '<div id="advantage-list">';
 					while($subPagesQuery->have_posts()) {
 						$subPagesQuery->the_post();
-						echo '<div><a href="' . get_the_permalink() . '" class="adv-single">' . get_the_post_thumbnail($post->ID, 'medium') . '</a></div>';
+						echo '<div><a href="' . get_the_permalink() . '" class="adv-single" target="_blank">' . get_the_post_thumbnail($post->ID, 'medium') . '</a></div>';
 					}
 				echo '</div>';
 			}

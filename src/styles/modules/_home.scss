@@ -53,6 +53,13 @@
   margin: 0 auto 4vw auto;
   position: relative;
 
+  .slick-slide {
+    &:focus,
+    *:focus {
+      outline: none;
+    }
+  }
+
   .slick-arrow {
     @include icon(arrowRight-orange);
     position: absolute;
@@ -128,6 +135,8 @@
 
     cite {
       text-align: right;
+      font-size: 0.75em;
+      @include fontBold(false);
 
       &::before {
         content: '\2014';

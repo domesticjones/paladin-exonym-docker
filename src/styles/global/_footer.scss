@@ -12,6 +12,9 @@
 
   h1 {
     margin-bottom: 0.75em;
+    color: $orange;
+    font-family: $font-default;
+    @include fontItalic();
   }
 }
 

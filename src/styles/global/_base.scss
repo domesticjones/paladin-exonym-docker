@@ -35,5 +35,37 @@ a {
 }
 
 /**
-  Responsive Breakpoints
+  404 Page
   ---------------------------------------------------------------------- */
+.sidebar-404-error {
+  nav {
+    @include navMenu(vertical);
+
+    a {
+      color: $blue;
+      display: block;
+      padding: 0.5rem 0;
+      @include transition();
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .sub-menu {
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+    border-left: 1px solid $orange;
+
+    li:first-child a {
+      padding-top: 0;
+      margin-top: 0.5rem;
+    }
+
+    li:last-child a {
+      padding-bottom: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
